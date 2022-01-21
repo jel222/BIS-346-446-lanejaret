@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Jaret Lane
+Exercise 7.14
+January 21st 2022
+"""
+
+import numpy as np
+
+array1=np.array([[0,1],[2,3]])
+array2=np.array([[4,5],[6,7]])
+
+
+print(array1)
+print(array2)
+print()
+array3=np.vstack((array1,array2))
+
+print(f'a)\n{array3}')
+print()
+
+
+array4=np.hstack((array1,array2))
+
+print(f'b)\n{array4}')
+print()
+
+
+array4copy=array4.view()
+array5=np.vstack((array4copy,array4copy))
+print(f'c)\n{array5}')
+print()
+
+
+array3copy=array3.view()
+array6=np.hstack((array3copy,array3copy))
+print(f'd)\n{array6}')
